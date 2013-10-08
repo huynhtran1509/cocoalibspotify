@@ -1584,8 +1584,6 @@ static SPSession *sharedSession;
 
 -(void)resetProdTimerWithTimeout:(NSTimeInterval)timeout {
 
-	NSAssert(dispatch_get_current_queue() == dispatch_get_main_queue(), @"Not on main thread!");
-
 	[self.prodTimeoutTimer invalidate];
 	self.prodTimeoutTimer = nil;
 	self.prodTimeoutTimer = [NSTimer scheduledTimerWithTimeInterval:timeout

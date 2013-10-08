@@ -173,8 +173,8 @@
 	NSURL *bundlePath = [[NSBundle mainBundle] URLForResource:@"SPLoginResources" withExtension:@"bundle"];
 	NSBundle *resourcesBundle = [NSBundle bundleWithURL:bundlePath];
 	
-	self.view = [[UIView alloc] initWithFrame:CGRectMake(0.0, 0.0, 320.0, 416.0)];
-	self.view.backgroundColor = [UIColor redColor];
+	self.view = [[UIScrollView alloc] initWithFrame:CGRectMake(0.0, 0.0, 320.0, 416.0)];
+	self.view.backgroundColor = [UIColor blackColor];
 
 	self.backgroundImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0.0, 0.0, 320.0, 416.0)];
 	self.backgroundImageView.contentMode = UIViewContentModeScaleAspectFill;
@@ -261,7 +261,7 @@
 	loggingInLabel.font = [UIFont systemFontOfSize:14.0];
 	loggingInLabel.textColor = [UIColor colorWithWhite:0.3 alpha:1.0];
 	loggingInLabel.backgroundColor = [UIColor whiteColor];
-	loggingInLabel.textAlignment = UITextAlignmentCenter;
+	loggingInLabel.textAlignment = NSTextAlignmentCenter;
 	
 	[self.loggingInView addSubview:loggingInLabel];
 	[self.loginFormView addSubview:self.loggingInView];
@@ -316,7 +316,7 @@
     [super viewWillAppear:animated];
 
 	previousStyle = [[UIApplication sharedApplication] statusBarStyle];
-	[[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleBlackOpaque animated:animated];
+	[[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent animated:animated];
 }
 
 -(void)viewWillDisappear:(BOOL)animated {
