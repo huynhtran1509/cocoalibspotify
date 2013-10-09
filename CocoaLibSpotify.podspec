@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         =  'CocoaLibSpotify'
-  s.version      =  '2.4.5'
+  s.version      =  '2.4.6'
   s.author       =  'Spotify'
   s.license      =  'BSD 3-Clause'
   s.homepage     =  'https://github.com/spotify/cocoalibspotify'
